@@ -1,0 +1,11 @@
+$color-bg: #555;
+$color-primary: whitesmoke;
+$color-pop: aquamarine;
+
+$spacing-l: 2rem;
+
+body {
+    background: $color-bg;
+    color: $color-primary;
+    padding: $spacing-l;
+}

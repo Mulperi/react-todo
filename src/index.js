@@ -5,6 +5,8 @@ import Header from './components/presentational/Header';
 import List from './components/containers/List';
 import Input from './components/presentational/Input';
 
+import './styles/styles.scss';
+
 const items = [
   { title: 'Eka', id: 1 },
   { title: 'Toka', id: 2 },
