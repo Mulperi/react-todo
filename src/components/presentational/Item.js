@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Item = props => (
-  <div>
+  <div className="item">
     {props.item.title}
     <button
       onClick={() => {

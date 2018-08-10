@@ -7,19 +7,10 @@ import Input from '../presentational/Input';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { items: this.props.items, input: '' };
+    this.state = { items: this.props.items };
 
     this.onSave = this.onSave.bind(this);
     this.onDelete = this.onDelete.bind(this);
-    this.onChange = this.onChange.bind(this);
-  }
-
-  onChange(event) {
-    const input = event.target.value;
-
-    this.setState(prevState => ({
-      input
-    }));
   }
 
   onDelete(id) {
@@ -29,12 +20,12 @@ class App extends React.Component {
     }));
   }
 
-  onSave(event) {
-    event.preventDefault();
+  onSave(item) {
+    const title = item;
     this.setState(prevState => ({
       items: [
         ...prevState.items,
-        { title: this.state.input, id: this.state.items.length + 1 }
+        { title, id: this.state.items.length + 1 }
       ]
     }));
   }
@@ -43,8 +34,10 @@ class App extends React.Component {
     return (
       <main>
         <Header />
-        <Input onSave={this.onSave} onChange={this.onChange} />
-        <List items={this.state.items} onDelete={this.onDelete} />
+        <div className="content">
+            <Input onSave={this.onSave} onChange={this.onChange} />
+            <List items={this.state.items} onDelete={this.onDelete} />
+        </div>
       </main>
     );
   }

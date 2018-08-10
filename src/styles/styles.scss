@@ -1,11 +1,83 @@
-$color-bg: #555;
-$color-primary: whitesmoke;
+$color-bg: #888;
+$color-lightgrey: whitesmoke;
 $color-pop: aquamarine;
 
 $spacing-l: 2rem;
+$spacing-m: 1rem;
+$spacing-s: 0.5rem;
+
+$border-radius: 4px;
 
 body {
     background: $color-bg;
-    color: $color-primary;
+    color: $color-lightgrey;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+main {
+    margin: 0;
+}
+
+header {
+    background: whitesmoke;
+    color: $color-bg;
     padding: $spacing-l;
+}
+
+.content {
+    padding: $spacing-l;
+}
+
+section {
+    margin-bottom: $spacing-l;
+}
+
+.items-container {
+
+}
+
+.item {
+    background: $color-bg * 1.5;
+    border-radius: $border-radius;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $color-bg;
+    padding: $spacing-s;
+    margin-bottom: $spacing-s;
+    max-width: 640px;
+    transition: all 0.5s;
+}
+.item:hover {
+    background: $color-bg * 1.25;
+    color: $color-lightgrey;
+    transition: all 0.2s;
+}
+
+button {
+    background: #555;
+    cursor: pointer;
+    color: $color-pop;
+    border: 0px solid $color-pop;
+    border-radius: 20px;
+    outline: none;
+    width: 30px;
+    height: 30px;
+}
+
+button:hover {
+    background: $color-pop;
+    box-shadow: 0 0 10px $color-pop;
+    color: $color-bg;
+}
+
+input[type="text"] {
+    background: rgba(0,0,0,0);
+    border: 0;
+    border-bottom: 1px solid $color-lightgrey;
+    color: $color-lightgrey;
+    font-size: 2rem;
+    outline: none;
+    margin-right: $spacing-l;
 }
